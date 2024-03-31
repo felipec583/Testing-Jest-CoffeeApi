@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1711897872668" clover="3.2.0">
-  <project timestamp="1711897872668" name="All files">
-    <metrics statements="45" coveredstatements="28" conditionals="14" coveredconditionals="5" methods="11" coveredmethods="6" elements="70" coveredelements="39" complexity="0" loc="45" ncloc="45" packages="1" files="1" classes="1"/>
+<coverage generated="1711901060991" clover="3.2.0">
+  <project timestamp="1711901060992" name="All files">
+    <metrics statements="45" coveredstatements="28" conditionals="16" coveredconditionals="6" methods="11" coveredmethods="6" elements="72" coveredelements="40" complexity="0" loc="45" ncloc="45" packages="1" files="1" classes="1"/>
     <file name="index.js" path="C:\Users\Felipe\Desktop\Webdev\DesafioLat\backend\final\index.js">
-      <metrics statements="45" coveredstatements="28" conditionals="14" coveredconditionals="5" methods="11" coveredmethods="6"/>
+      <metrics statements="45" coveredstatements="28" conditionals="16" coveredconditionals="6" methods="11" coveredmethods="6"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
+      <line num="6" count="1" type="cond" truecount="1" falsecount="1"/>
       <line num="7" count="1" type="stmt"/>
       <line num="9" count="1" type="cond" truecount="1" falsecount="1"/>
       <line num="10" count="0" type="stmt"/>

@@ -3,7 +3,7 @@ import "dotenv/config";
 const app = express();
 import cafes from "./cafes.json"  with { type: "json" };
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV;
 
 if (NODE_ENV !== "test") {

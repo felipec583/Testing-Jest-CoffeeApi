@@ -12,10 +12,15 @@ describe("Operaciones CRUD de cafes", () => {
       expect(response.statusCode).toBe(200);
     });
 
-    test("Request returns Array", async () => {
+    test("Request returns Array with at leas one object", async () => {
       const { body: cafes } = await request(app).get("/cafes").send();
-
+      const expected = {
+        id: expect.any(Number),
+        nombre: expect.any(String),
+      };
       expect(cafes).toBeInstanceOf(Array);
+      expect(cafes.length).toBeGreaterThan(0);
+      expect(cafes[0]).toEqual(expect.objectContaining(expected));
     });
 
     // Post
@@ -52,7 +57,6 @@ describe("Operaciones CRUD de cafes", () => {
           .delete(`/cafes/${nonExistentId}`)
           .set("Authorization", jwt)
           .send();
-        console.log(nonExistentId);
         expect(statusCode).toBe(404);
       });
     });
