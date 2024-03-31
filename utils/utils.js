@@ -6,17 +6,16 @@ function generateRandomNumber() {
 
 function createNonExistentId(data) {
   let nonExistentId;
-  const dataIds = getDataIds(data);
+  const dataIds = new Set(getDataIds(data));
 
   do {
     nonExistentId = generateRandomNumber();
-  } while (dataIds.includes(nonExistentId));
+  } while (dataIds.has(nonExistentId));
   return nonExistentId;
 }
 
 function getDataIds(data) {
-  const dataIds = [...data].map((values) => values.id);
-  return dataIds;
+  return data.map((values) => values.id);
 }
 
 export { createNonExistentId };

@@ -3,9 +3,7 @@ import { createNonExistentId } from "../utils/utils";
 import { app } from "../index";
 import cafes from "../cafes.json";
 
-
 describe("Operaciones CRUD de cafes", () => {
-
   //Get
   describe("GET/ Request", () => {
     test("Server returns 200 code when fetching coffee data", async () => {
@@ -20,11 +18,9 @@ describe("Operaciones CRUD de cafes", () => {
       expect(cafes).toBeInstanceOf(Array);
     });
 
-
-
     // Post
     describe("POST/ Request", () => {
-      test("Adding a new coffee drink server returns 201 code", async () => {
+      test("Server returns 201 status code when adding a new coffee drink", async () => {
         const id = createNonExistentId(cafes);
         const coffeeName = "Latte";
         const { statusCode } = await request(app)
@@ -33,7 +29,6 @@ describe("Operaciones CRUD de cafes", () => {
         expect(statusCode).toBe(201);
       });
     });
-
 
     //Put
     describe("PUT/ Request", () => {
@@ -47,7 +42,6 @@ describe("Operaciones CRUD de cafes", () => {
         expect(statusCode).toBe(400);
       });
     });
-
 
     //Delete
     describe("DELETE/ Request", () => {

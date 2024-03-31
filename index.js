@@ -1,9 +1,16 @@
 ﻿import express from "express";
 import "dotenv/config";
 const app = express();
-import cafes from "./cafes.json";
+import cafes from "./cafes.json"  with { type: "json" };
 
 const PORT = process.env.PORT;
+const NODE_ENV = process.env.NODE_ENV;
+
+if (NODE_ENV !== "test") {
+  app.listen(PORT, () => {
+    console.log("SERVER ON");
+  });
+}
 
 app.use(express.json());
 
